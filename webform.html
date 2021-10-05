@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>form validation using java script</title>
+<style>
+body{
+background-image: url('https://pixabay.com/get/g1410f1daf99bded2c216bde9aa1b6d32849825c9586f33ab4bb008aef611d5c522bbfebfc3a6c282d9c678e627c126e77132c3889d7b6edb599bd874a48a30cb326a271b0036793c1051ec32e891df44_1920.jpg'); 
+</style>
+<script type="text/javascript">
+function validation()
+{
+if(document.f1.name.value=="")
+{
+window.alert("Plz Enter Your Name");
+return false;
+}
+else if(document.f1.email.value=="")
+{
+window.alert("Plz Enter Your E-mail:");
+return false;
+}
+else if(document.f1.email.value.indexOf('@gmail.com')==-1)
+{
+window.alert("Plz Enter Your Valid E-mail");
+return false;
+}
+else if(document.f1.addr.value=="")
+{
+window.alert("Plz Enter Your Address");
+return false;
+}
+else if(document.f1.DOB.selectedIndex==0)
+{
+window.alert("Plz Select Your DOB");
+return false;
+}
+else if(document.f1.phone number.selectedIndex==0)
+{
+window.alert("plz enter phone number");
+return false;
+}
+else if(document.f1.Gender.selectedIndex==0)
+{
+window.alert("plz choose your Gender");
+retuen false;
+}
+else
+if((document.f1.chk[0].checked==false)&&(document.f1.chk[1].checked==false)&&(
+document.f1.chk[2].checked==false))
+{
+window.alert("Plz Select Your Qualification");
+return false;
+}
+else
+return true;
+}
+</script></head>
+<body bgcolor="grey">
+<h3 style="text-align:center">RECRUITMENT SYSTEM</h3>
+<form name="f1" action="Register.html" onsubmit="return validation()">
+<fieldset>
+<legend>Submission Form</legend><br/>
+<table border="1">
+<tr><td>Name:</td><td><input type="text" name="name" size="31"></td></tr>
+<tr><td>E-mail:</td><td><input type="text" name="email" size="31"></td></tr>
+<tr><td>Address:</td><td><Textarea name="addr" rows="5"
+cols="25"></Textarea></td></tr>
+<tr><td>DOB:</td><td><input type="text" name="DOB" size="31"></td></tr>
+<tr><td>phone number:</td><td><input type="text" name="phone number" size="31"></td></tr>
+<tr>
+<td>Gender:</td>
+<td>
+<input type="radio" name="rdo">Male
+<input type="radio" name="rdo">Female <input type="radio"
+name="rdo">Transgender
+</td>
+</tr>
+<tr>
+<td>Qualification:</td><td>
+<input type="checkbox" name="chk">B.E
+<input type="checkbox" name="chk">M.E
+<input type="checkbox" name="chk">Ph.D.
+</td>
+</tr>
+</table><br/>
+<input type="submit" value="submit">
+<input type="submit" value="cancel"></fieldset></form>
+</body>
+</html>
+<html>
+<head><title>submitted successful</title></head>
+<body>
+<h3>submitted successfully.......!</h3>
+</body>
+</html>
